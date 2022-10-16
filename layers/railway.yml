@@ -1,0 +1,26 @@
+id: railway
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 13
+filter:
+  - all
+  - - '=='
+    - class
+    - rail
+  - - '!='
+    - operator
+    - jr
+  - - '!in'
+    - brunnel
+    - tunnel
+paint:
+  line-color: '#999999'
+  line-width:
+    stops:
+      - - 10
+        - 0.8
+      - - 18
+        - 4
+      - - 22
+        - 20
