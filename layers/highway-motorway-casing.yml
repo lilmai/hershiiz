@@ -1,0 +1,34 @@
+id: highway-motorway-casing
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 5
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - '=='
+    - class
+    - motorway
+  - - '!has'
+    - ramp
+layout:
+  line-cap: butt
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#4ed19e'
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml
+  line-opacity:
+    - interpolate
+    - - linear
+    - - zoom
+    - 5
+    - 0.6
+    - 11
+    - 1

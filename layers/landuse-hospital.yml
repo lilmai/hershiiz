@@ -1,0 +1,11 @@
+id: landuse-hospital
+type: fill
+source: geolonia
+source-layer: landuse
+minzoom: 8
+filter:
+  - '=='
+  - class
+  - hospital
+paint:
+  fill-color: '#fde'

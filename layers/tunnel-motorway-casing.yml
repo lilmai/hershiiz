@@ -1,0 +1,22 @@
+id: tunnel-motorway-casing
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - tunnel
+  - - '=='
+    - class
+    - motorway
+layout:
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#e9ac77'
+  line-dasharray:
+    - 0.5
+    - 0.25
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

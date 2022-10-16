@@ -1,0 +1,22 @@
+id: waterway-other
+type: line
+source: geolonia
+source-layer: waterway
+minzoom: 8
+filter:
+  - '!in'
+  - class
+  - canal
+  - river
+  - stream
+layout:
+  line-cap: round
+paint:
+  line-color: '#65cbf9'
+  line-width:
+    base: 1.3
+    stops:
+      - - 13
+        - 0.5
+      - - 20
+        - 2
