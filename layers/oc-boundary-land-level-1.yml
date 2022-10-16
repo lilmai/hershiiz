@@ -1,0 +1,22 @@
+id: oc-boundary-land-level-1
+type: line
+source: oceanus
+source-layer: oc-boundary
+minzoom: 3
+maxzoom: 6
+filter:
+  - all
+  - - '=='
+    - - get
+      - admin_level
+    - 1
+layout:
+  line-join: round
+paint:
+  line-color: '#9e9cab'
+  line-dasharray:
+    - 3
+    - 1
+    - 1
+    - 1
+  line-width: 1
