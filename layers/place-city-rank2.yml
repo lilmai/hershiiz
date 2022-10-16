@@ -1,0 +1,61 @@
+id: place-city-rank2
+type: symbol
+source: geolonia
+source-layer: place
+minzoom: 6
+filter:
+  - all
+  - - '!='
+    - capital
+    - 2
+  - - '=='
+    - class
+    - city
+  - - '=='
+    - rank
+    - 2
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  icon-image: circle-stroked
+  icon-size: 0.8
+  text-anchor: top
+  text-variable-anchor:
+    - top
+    - left
+    - right
+  text-radial-offset:
+    - interpolate
+    - - linear
+    - - zoom
+    - 6
+    - 0.5
+    - 8
+    - 0.4
+  text-font:
+    - Noto Sans CJK JP Bold
+  text-size:
+    - interpolate
+    - - exponential
+      - 1.5
+    - - zoom
+    - 6
+    - 10
+    - 10
+    - 17
+  text-field: '{name}'
+  text-max-width: 8
+  visibility: visible
+paint:
+  icon-color: '#000000'
+  icon-opacity:
+    stops:
+      - - 11.9
+        - 1
+      - - 12
+        - 0
+  text-halo-blur: 0.5
+  text-color: 'rgba(71, 71, 71, 1)'
+  text-halo-width: 1
+  text-halo-color: '#ffffff'

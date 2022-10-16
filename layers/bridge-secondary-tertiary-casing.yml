@@ -1,0 +1,20 @@
+id: bridge-secondary-tertiary-casing
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - bridge
+  - - in
+    - class
+    - secondary
+    - tertiary
+layout:
+  line-join: round
+paint:
+  line-color: rgba(222, 222, 222, 1)
+  line-opacity: 1
+  line-width: !!inc/file layers/components/broad-road-width-casing.yml

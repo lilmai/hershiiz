@@ -1,0 +1,19 @@
+id: tunnel-motorway
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - tunnel
+  - - '=='
+    - class
+    - motorway
+layout:
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#ffdaa6'
+  line-width: !!inc/file layers/components/broad-road-width.yml

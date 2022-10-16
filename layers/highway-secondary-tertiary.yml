@@ -1,0 +1,22 @@
+id: highway-secondary-tertiary
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - in
+    - class
+    - secondary
+    - tertiary
+layout:
+  line-cap: round
+  line-join: round
+  visibility: visible
+paint:
+  line-color: '#fff'
+  line-width: !!inc/file layers/components/broad-road-width.yml

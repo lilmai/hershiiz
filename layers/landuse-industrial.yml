@@ -1,0 +1,15 @@
+id: landuse-industrial
+type: fill
+source: geolonia
+source-layer: landuse
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - $type
+    - Polygon
+  - - '=='
+    - class
+    - industrial
+paint:
+  fill-color: hsla(49, 100%, 88%, 0.34)
