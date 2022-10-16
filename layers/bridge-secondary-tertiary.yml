@@ -1,0 +1,19 @@
+id: bridge-secondary-tertiary
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - bridge
+  - - in
+    - class
+    - secondary
+    - tertiary
+layout:
+  line-join: round
+paint:
+  line-color: rgba(255, 255, 255, 1)
+  line-width: !!inc/file layers/components/broad-road-width.yml

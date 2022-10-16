@@ -1,0 +1,25 @@
+id: tunnel-secondary-tertiary
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - brunnel
+    - tunnel
+  - - in
+    - class
+    - secondary
+    - tertiary
+layout:
+  line-join: round
+paint:
+  line-color: '#fff4c6'
+  line-opacity:
+    stops:
+      - - 12
+        - 0
+      - - 13
+        - 1
+  line-width: !!inc/file layers/components/broad-road-width.yml

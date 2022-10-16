@@ -1,0 +1,9 @@
+id: water-blur
+type: line
+source: geolonia
+source-layer: water
+minzoom: 17
+layout:
+  line-join: "round"
+  visibility: visible
+paint: !!inc/file layers/components/water-blur-paint.yml
