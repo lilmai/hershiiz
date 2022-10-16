@@ -1,0 +1,38 @@
+id: oc-label-pref
+type: symbol
+source: geolonia
+source-layer: place
+minzoom: 4
+maxzoom: 6
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - pref
+  # - - has
+  #   - jflag
+layout:
+  text-font:
+    - Noto Sans Universal Regular
+  text-size:
+    stops:
+      - - 3
+        - 10
+      - - 6
+        - 12
+  text-field: '{name}'
+  text-max-width: 8
+  visibility: visible
+  text-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 4
+    - 20
+    - 6
+    - 100
+paint:
+  text-color: rgba(68, 68, 68, 1)
+  text-halo-width: 1.2
+  text-halo-color: rgba(255,255,255,0.8)

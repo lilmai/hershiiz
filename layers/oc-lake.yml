@@ -1,0 +1,16 @@
+id: oc-lake
+type: fill
+source: geolonia
+source-layer: oc-water
+minzoom: 4
+maxzoom: 6
+filter:
+  - all
+  - - '=='
+    - - get
+      - class
+    - lakes
+layout:
+  visibility: visible
+paint:
+  fill-color: '#65cbf9'

@@ -1,0 +1,38 @@
+id: highway-motorway
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 5
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - '=='
+    - class
+    - motorway
+  - - '!has'
+    - ramp
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color:
+    - interpolate
+    - - linear
+    - - zoom
+    - 4
+    - '#f0762d'
+    - 8
+    - '#f0762d'
+    - 12
+    - '#FF8D48'
+    - 14
+    - '#FF9D62'
+    - 16
+    - '#FFB98E'
+  line-width: !!inc/file layers/components/highway-road-width.yml
