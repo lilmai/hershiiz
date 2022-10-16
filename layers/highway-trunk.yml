@@ -1,0 +1,23 @@
+id: highway-trunk
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 8
+filter:
+  - all
+  - - '=='
+    - $type
+    - LineString
+  - - '!in'
+    - brunnel
+    - bridge
+    - tunnel
+  - - in
+    - class
+    - trunk
+layout:
+  line-cap: round
+  line-join: round
+paint:
+  line-color: '#ffffff'
+  line-width: !!inc/file layers/components/broad-road-width.yml

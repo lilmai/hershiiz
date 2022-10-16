@@ -1,0 +1,37 @@
+id: railway-subway
+type: line
+source: geolonia
+source-layer: transportation
+minzoom: 14
+filter:
+  - all
+  - - '=='
+    - class
+    - rail
+  - - '=='
+    - subclass
+    - subway
+paint:
+  line-offset:
+    stops:
+      - - 14
+        - 2
+      - - 15
+        - 2.5
+      - - 16
+        - 2.5
+      - - 17
+        - 8
+  line-opacity:
+    stops:
+      - - 14
+        - 0.1
+      - - 17
+        - 1
+  line-color: '#9dabdd'
+  line-width:
+      stops:
+      - - 14
+        - 1.5
+      - - 17
+        - 1
